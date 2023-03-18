@@ -26,7 +26,7 @@ def plot_top_words(model, feature_names, n_top_words, title):
     plt.show()
 if __name__ == '__main__':
     ### ^^^^^^^^^^^^^^^^^^ Import DataSet ^^^^^^^^^^^^^^^^^^
-    rows = pd.read_excel("./../Dataset_Corona_1949_2023_COMPLETO.xlsx").to_dict('records')
+    rows = pd.read_excel("./../Dataset_Corona_2023_COMPLETO.xlsx").to_dict('records')
     dataset = pd.DataFrame(data=rows)
     dataset = dataset.dropna()
     dataset_Only_Abstract = dataset["Abstract"].dropna()
