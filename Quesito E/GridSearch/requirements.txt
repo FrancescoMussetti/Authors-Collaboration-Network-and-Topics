@@ -1,0 +1,11 @@
+numpy
+bs4
+networkx
+nltk
+pandas
+requests
+matplotlib
+scikit-learn
+seaborn
+scipy
+gensim
