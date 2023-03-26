@@ -1,6 +1,6 @@
 import pandas as pd
 import Docs_Normalization
-from sklearn.decomposition import LatentDirichletAllocation, NMF
+from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
@@ -26,7 +26,7 @@ def plot_top_words(model, feature_names, n_top_words, title):
     plt.show()
 if __name__ == '__main__':
     ### ^^^^^^^^^^^^^^^^^^ Import DataSet ^^^^^^^^^^^^^^^^^^
-    rows = pd.read_excel("./../Dataset_Corona_2023_COMPLETO.xlsx").to_dict('records')
+    rows = pd.read_excel("./../Dataset/Dataset_Corona_2023_FINALE.xlsx").to_dict('records')
     dataset = pd.DataFrame(data=rows)
     dataset = dataset.dropna()
     dataset_Only_Abstract = dataset["Abstract"].dropna()
