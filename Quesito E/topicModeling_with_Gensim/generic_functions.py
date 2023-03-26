@@ -107,3 +107,30 @@ def show_results_coherence_plot(model, coherence_values, start, limit, step):
     plt.ylabel("Coherence score")
     plt.legend(("coherence"), loc='best')
     plt.show()
+
+def plot_topic_evolution(lda_model, corpus, dataset):
+    # Get yearly topic distributions
+    yearly_topic_distributions = {}
+    for i, doc in enumerate(corpus):
+        year = dataset.iloc[i]["Publication Year"]
+        if year not in yearly_topic_distributions:
+            yearly_topic_distributions[year] = [0] * lda_model.num_topics
+        topics = lda_model.get_document_topics(doc)
+        for topic in topics:
+            topic_id = topic[0]
+            topic_weight = topic[1]
+            yearly_topic_distributions[year][topic_id] += topic_weight
+
+    # Plot topic evolution over years
+    fig, ax = plt.subplots()
+    for i in range(lda_model.num_topics):
+        topic_id = i
+        topic_evolution = []
+        for year in sorted(yearly_topic_distributions.keys()):
+            topic_evolution.append(yearly_topic_distributions[year][topic_id])
+        ax.plot(sorted(yearly_topic_distributions.keys()), topic_evolution, label=f"Topic {topic_id}")
+    ax.legend()
+    ax.set_xlabel('Year')
+    ax.set_ylabel('Topic Frequency')
+    ax.set_title('Evolution of Topics')
+    plt.show()
