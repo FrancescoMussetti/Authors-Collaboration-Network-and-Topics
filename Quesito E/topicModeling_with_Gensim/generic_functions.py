@@ -93,12 +93,27 @@ def show_topic_clusters(model, corpus, n_topics=10):
                   plot_width=900, plot_height=700)
     plot.scatter(x=tsne_lda[:, 0], y=tsne_lda[:, 1], color=mycolors[topic_num])
     save(plot)
-def show_word_cloud(model):
-    for t in range(model.num_topics):
-        plt.figure()
-        plt.imshow(WordCloud().fit_words(dict(model.show_topic(t, 200))))
-        plt.axis("off")
-        plt.show()
+# def show_word_cloud(model):
+#     for t in range(model.num_topics):
+#         plt.figure()
+#         plt.imshow(WordCloud().fit_words(dict(model.show_topic(t, 200))))
+#         plt.axis("off")
+#         plt.show()
+##===### Visualize WordCloud for each Topics in LDA Model:
+def show_word_cloud(lda_model, n_topics=6, n_words=20):
+    topics = lda_model.show_topics(num_topics=n_topics, num_words=n_words, formatted=False)
+    fig, axs = plt.subplots(2, 3, figsize=(15, 10))
+    for i, ax in enumerate(axs.ravel()):
+        if i < n_topics:
+            words = dict(topics[i][1])
+            wc = WordCloud(background_color='black', max_words=200, width=800, height=400)
+            wc.generate_from_frequencies(words)
+            ax.imshow(wc, interpolation='bilinear')
+            ax.axis('off')
+            ax.set_title(f"WordCloud Topic#{i}")
+    plt.tight_layout()
+    plt.show()
+
 def show_results_coherence_plot(model, coherence_values, start, limit, step):
     x = range(start, limit, step)
     plt.plot(x, coherence_values)
