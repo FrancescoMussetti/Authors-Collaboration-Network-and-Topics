@@ -1,5 +1,8 @@
 # Analisi delle Reti di Collaborazione tra Autori nella Ricerca Scientifica in ambito “Coronavirus” #
 # Topic Modeling sugli articoli scientifici presenti sul Database PUBMED riguardanti le pubblicazioni relative al tema del "Coronavirus" #
+
+# QUESITO F:
+
 ## Descrizione
 ##  BRANCH TopicModeling_Gensim_NWE
 Nel branch TopicModeling_Gensim_NWE, il modello proposto è quello della Latent Dirichlet Allocation(LDA), con un numero di topics pari a 6.
