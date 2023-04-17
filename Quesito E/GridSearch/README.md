@@ -1,4 +1,7 @@
 # Analisi delle Reti di Collaborazione tra Autori nella Ricerca Scientifica in ambito “Coronavirus” #
+
+# QUESITO F:
+
 # Topic Modeling sugli articoli scientifici presenti sul Database PUBMED riguardanti le pubblicazioni relative al tema del "Coronavirus" #
 ## Descrizione
 ## BRANCH GrisSearch_NWE
