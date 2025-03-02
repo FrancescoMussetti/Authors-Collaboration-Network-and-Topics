@@ -25,14 +25,14 @@ Analisi globale e temporale: esplorazione dei principali argomenti e delle tende
 
 ## Dipendenze
 Per eseguire correttamente il progetto, è necessario installare le seguenti librerie Python:
-gensim
-nltk
-pyLDAvis
-matplotlib
-seaborn
-pandas
-numpy
-sklearn
+- gensim
+- nltk
+- pyLDAvis
+- matplotlib
+- seaborn
+- pandas
+- numpy
+- sklearn
 
 
 
