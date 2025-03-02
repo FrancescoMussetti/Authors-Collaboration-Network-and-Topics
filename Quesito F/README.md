@@ -2,7 +2,7 @@
 ## QUESITO F: Topic Modeling sulle Pubblicazioni Scientifiche del Database PUBMED sul Coronavirus
 Questo progetto si concentra sull'analisi delle reti di collaborazione tra autori nella ricerca scientifica sul tema del "Coronavirus". Il modello proposto è basato su tecniche di Topic Modeling, in particolare sull'algoritmo Latent Dirichlet Allocation (LDA), applicato agli articoli scientifici presenti nel database PUBMED, con l'obiettivo di esplorare i principali argomenti trattati nel corso degli anni, a partire dal 1949 fino al 2023.
 
-##Questa directory è suddiviso in due principali sotto-directory:
+## Questa directory è suddivisa in due principali sotto-directory:
 
 ## 1. GridSearch
 Questa sottodirectory si concentra sull'ottimizzazione del numero di topic da utilizzare per il modello LDA. È stato implementato un algoritmo di GridSearch per determinare il numero ottimale di topic per il corpus di documenti. L'analisi principale include:
