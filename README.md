@@ -27,3 +27,5 @@ si sia modificato nel tempo anche a seguito della pandemia Sars-Covid19.
 Tramite tale analisi dunque, cerchiamo di rispondere ad alcuni quesiti naturali che ci siamo posti in fase di
 progettazione riguardanti le possibili dinamiche che avvengono tra Autori o tra Autori e Riviste Scientifiche,
 che rappresentano il cardine di questa analisi.
+Una seconda analisi cerca di abbinare i risultati della Topic Modeling al Grafo, 
+al fine di poter osservare le collaborazioni tra Autori evidenziandole per il Topic maggiormente trattato da ciascun autore.
