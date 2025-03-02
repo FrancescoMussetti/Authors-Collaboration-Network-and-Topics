@@ -1,0 +1,14 @@
+spacy
+gensim
+bokeh
+pyLDAvis
+pandas
+numpy
+matplotlib
+seaborn
+nltk
+scikit-learn
+ipython
+wordcloud
+pytest
+python-Levenshtein-wheels
