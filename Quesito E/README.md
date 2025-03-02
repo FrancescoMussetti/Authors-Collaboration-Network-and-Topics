@@ -29,7 +29,7 @@ dove lo spessore dell'edge è rappresentativo del peso dello stesso, quindi di q
 potrebbero non essere direttamente connessi, anch'essi colorati come detto precedentemente.
 
 
-4)Il quarto è un' insieme di sottografi attraverso il quale riusciamo a visualizzare:
+4) Il quarto è un' insieme di sottografi attraverso il quale riusciamo a visualizzare:
 - Tutti i sottografi generati dall'eliminazione dei 20 Autori con maggior betweenness individuati
 precedentemente, in modo da darci un'idea del carico informativo che questi nodi possedevano, anch'essi colorati
 come indicato precedentemente.
