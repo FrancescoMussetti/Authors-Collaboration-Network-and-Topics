@@ -1,8 +1,6 @@
-# Analisi delle Reti di Collaborazione tra Autori nella Ricerca Scientifica in ambito “Coronavirus” #
+## Analisi delle Reti di Collaborazione tra Autori nella Ricerca Scientifica in ambito “Coronavirus” #
 
-# QUESITO F:
-
-# Topic Modeling sugli articoli scientifici presenti sul Database PUBMED riguardanti le pubblicazioni relative al tema del "Coronavirus" #
+# QUESITO F: Topic Modeling sugli articoli scientifici presenti sul Database PUBMED riguardanti le pubblicazioni relative al tema del "Coronavirus" #
 ## Descrizione
 ## BRANCH GrisSearch_NWE
 Nel branch GrisSearch_NWE, dopo aver effettuato le opportune operazioni di pre-processing del contenuto testuale dei Documenti viene implementato il modello LDA.
