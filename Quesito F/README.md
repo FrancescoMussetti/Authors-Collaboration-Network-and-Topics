@@ -1,38 +1,38 @@
-# Analisi delle Reti di Collaborazione tra Autori nella Ricerca Scientifica in ambito “Coronavirus” #
-# QUESITO E: #
+##Analisi delle Reti di Collaborazione tra Autori nella Ricerca Scientifica in ambito “Coronavirus”
+#QUESITO F: Topic Modeling sulle Pubblicazioni Scientifiche del Database PUBMED sul Coronavirus
+Questo progetto si concentra sull'analisi delle reti di collaborazione tra autori nella ricerca scientifica sul tema del "Coronavirus". Il modello proposto è basato su tecniche di Topic Modeling, in particolare sull'algoritmo Latent Dirichlet Allocation (LDA), applicato agli articoli scientifici presenti nel database PUBMED, con l'obiettivo di esplorare i principali argomenti trattati nel corso degli anni, a partire dal 1949 fino al 2023.
 
-## Descrizione
-Nel seguente codice riprendiamo l'analisi effettuata sui collegamenti tra gli Autori che hanno collaborato
- ad una stessa pubblicazione scientifica in ambito "Coronavirus" durante il periodo di riferimento indicato.
-  Nel dettaglio andremo ad indagare come i Primi Autori si posizionano all'interno del grafo in termini di livelli Degree e
- di Betweenneess che presentano gli stessi,  in modo da evidenziare, per quanto possibie, se i Primi Autori risultano essere
- autori con un maggior numero di collaborazioni ed in particolare se gli stessi svolgano un ruolo di "ponte" tra due o più gruppi di
-autori e che abbiano una posizione importante nel passaggio delle informazioni tra le varie sotto-comunità scientifiche.
+#Questa directory è suddiviso in due principali sotto-directory:
 
-In particolare il seguente codice genera quattro distinti grafici:
+#1. GridSearch
+Questa sottodirectory si concentra sull'ottimizzazione del numero di topic da utilizzare per il modello LDA. È stato implementato un algoritmo di GridSearch per determinare il numero ottimale di topic per il corpus di documenti. L'analisi principale include:
 
-1) Il primo è il grafo  attraverso il quale riusciamo a visualizzare:
-- I nodi, rappresentanti ogni singolo Autore, colorati in base al fatto che essi siano Primi Autori (BLU) o Autori Secondari (ROSSO) e
-le cui dimensioni sono date dalla rispettiva Degree (numero di archi in entrata), dunque maggiore degree maggiore grandezza del nodo.
-- Gli edge, che rappresentano i collegamenti tra Autori che hanno collaborato ad una stessa pubblicazione,
-dove lo spessore dell'edge è rappresentativo del peso dello stesso, quindi di quante collaborazioni hanno effettivamente avuto i due autori collegati.
+Pre-processing del testo: utilizzo di tokenizzazione, lemmatizzazione e regular expressions per la pulizia e normalizzazione del testo.
+Raccolta dei dati: articoli scientifici dal database PUBMED.
+Analisi dei Trend Temporali: analisi del numero di documenti per topic in vari periodi di tempo.
+Risultati: il numero ottimale di topic identificato tramite GridSearch è pari a 6.
 
-2) Il secondo è un grafico a barre  attraverso il quale riusciamo a visualizzare:
-- La Degree dei primi 20 Nodi con maggior degree pesata per numero di collaborazioni e dunque l'elenco dei rispettivi
-20 Autori con maggiori collaborazioni, colorati come detto precedentemente.
+#2. TopicModeling_with_Gensim
+Questa sottodirectory è dedicata all'implementazione del modello LDA utilizzando la libreria Gensim. In questo branch sono stati utilizzati anche strumenti di visualizzazione avanzati per facilitare l'interpretazione dei risultati. Le principali analisi e strumenti utilizzati includono:
 
+Tokenizzazione avanzata: sia per singole parole che per bigrammi e trigrammi.
+Lemmatisation: applicata al testo per ridurre le parole alle loro forme base.
+Visualizzazioni:
+WordCloud per visualizzare i termini più rappresentativi di ciascun topic.
+t-SNE per la riduzione della dimensionalità e l'identificazione di cluster nei dati.
+pyLDAvis per l'analisi interattiva dei topic.
+Analisi globale e temporale: esplorazione dei principali argomenti e delle tendenze nel tempo, a partire dal 1949 fino al 2023.
 
-3) Il terzo è un grafico a barre  attraverso il quale riusciamo a visualizzare:
-- La Betweenness Centrality dei primi 20 Nodi con maggior betweenness e dunque l'elenco dei rispettivi
-20 Autori  con una centralità di intermediazione elevata che potrebbero avere una posizione privilegiata nel grafo,
- agendo come intermediari chiave nel facilitare la comunicazione o la collaborazione tra altri autori o gruppi di autori che altrimenti
-potrebbero non essere direttamente connessi, anch'essi colorati come detto precedentemente.
-
-
-4)Il quarto è un' insieme di sottografi attraverso il quale riusciamo a visualizzare:
-- Tutti i sottografi generati dall'eliminazione dei 20 Autori con maggior betweenness individuati
-precedentemente, in modo da darci un'idea del carico informativo che questi nodi possedevano, anch'essi colorati
-come indicato precedentemente.
+#Dipendenze
+Per eseguire correttamente il progetto, è necessario installare le seguenti librerie Python:
+gensim
+nltk
+pyLDAvis
+matplotlib
+seaborn
+pandas
+numpy
+sklearn
 
 
 
